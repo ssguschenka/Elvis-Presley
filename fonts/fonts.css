@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Racing Done Pro';
+  src: local('Racing Done Pro'),
+  url(./racing-done-pro.woff2) format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sansation';
+  src: local('Sansation'),
+   url(./Sansation-Light.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+  font-family: 'Seenonim';
+  src: local('Seenonim'),
+   url(./ofont.ru_Seenonim.ttf) format('ttf');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chicoree';
+  src: local('Chicoree'),
+   url(./ofont.ru_Chicoree.woff) format('woff');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neonderthaw';
+  src: local('Neonderthaw'),
+  url(./Neonderthaw-Regular.ttf) format('ttf');
+  font-weight: normal;
+  font-display: swap;
+}
+
+

@@ -1,0 +1,18 @@
+:root {
+  --header-dackground-image:  linear-gradient(0.25turn,
+    #000 0% 35%,
+    rgba(52, 52, 50, 0.62) 65% 80%
+  );
+  --section-image-bg-image: url(../images/elvis-presley-dark.jpg);
+  --section-team-bg-image: url(../images/team-photo-dark.png);
+  --backround-color-body: #000;
+  --backround-image-title: linear-gradient(#f0fab9 0% 45%, #c59d3e 63% 100%);
+  --accent-color: #f0fab9;
+  --darck--accent-color: #cbab50;
+  --block-color: rgb(52 52 50 / 68%);
+  --text-color: #fff;
+  --header-footer-font-family: 'Racing Done Pro';
+  --title-font-family: 'Chicoree';
+  --subtitle-font-family: 'Seenonim';
+  --text-font-family: 'Sansation';
+}
