@@ -18,6 +18,28 @@
 
 .text-conteiner {
   background-image: var(--backround-image-title);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.title {
+  font-family: var(--header-footer-font-family);
+  text-transform: uppercase;
+  font-size: clamp(30px, calc(14.399px + 4.16vw), 57px);
+  line-height: 60px;
+  text-shadow: -1px 0 rgb(255 255 255 / 60%);
+  color: transparent;
+}
+
+@supports (
+  (-webkit-text-stroke: 0.1px rgb(255 255 255 / 60%)) or
+    (text-stroke: 0.1px rgb(255 255 255 / 60%))
+) {
+  .title {
+    -webkit-text-stroke: 0.1px rgb(255 255 255 / 60%);
+    text-stroke: 0.1px rgb(255 255 255 / 60%);
+    text-shadow: none;
+  }
 }
 /* ---Шапка---------------------------------------------------------------------------------------------- */
 .header {
@@ -72,29 +94,7 @@
 .text-conteiner-header {
   grid-column: 1/4;
   grid-row: 2;
-  background-clip: text;
-  -webkit-background-clip: text;
   padding-left: clamp(15px, calc(-21.402px + 9.707vw), 78px);
-}
-
-.header_title {
-  font-family: var(--header-footer-font-family);
-  text-transform: uppercase;
-  font-size: clamp(30px, calc(14.399px + 4.16vw), 57px);
-  line-height: 60px;
-  text-shadow: -1px 0 rgb(255 255 255 / 60%);
-  color: transparent;
-}
-
-@supports (
-  (-webkit-text-stroke: 0.1px rgb(255 255 255 / 60%)) or
-    (text-stroke: 0.1px rgb(255 255 255 / 60%))
-) {
-  .header_title {
-    -webkit-text-stroke: 0.1px rgb(255 255 255 / 60%);
-    text-stroke: 0.1px rgb(255 255 255 / 60%);
-    text-shadow: none;
-  }
 }
 
 .header_subtitle {
@@ -174,15 +174,22 @@
   grid-template-rows: min-content 1fr;
   box-shadow: 0 0 52px -13px var(--text-color);
   border-radius: 28%;
+  transition: box-shadow 0.5s;
+}
+
+.section_card:hover {
+  box-shadow: 0 0 70px -8px var(--text-color);
 }
 
 .section_card:nth-child(2) {
   background-image: radial-gradient(
-    at bottom right,
+    circle at top,
     var(--block-color) 0 25%,
     var(--darck--accent-color) 50% 70%,
     #343432 85% 100%
   );
+  background-size: 200% 200%;
+  background-position: top right;
 }
 
 .section_card:nth-child(3) {
@@ -353,7 +360,7 @@
   inline-size: clamp(355px, calc(92.096px + 70.108vw), 810px);
 }
 
-.frisbee_btn {
+.frisbee_link {
   inline-size: clamp(255px, calc(78.767px + 46.995vw), 560px);
   align-self: center;
   background-image: linear-gradient(
@@ -366,6 +373,8 @@
   font-size: clamp(12px, calc(5.066px + 1.849vw), 24px);
   color: var(--backround-color-body);
   line-height: 220%;
+  text-align: center;
+  text-decoration: none;
 }
 
 /* --КОМАНДА---------------------------------------------------------------------------------------------------------------------------------- */
@@ -432,14 +441,17 @@
   display: none;
 }
 
+
+
 .card {
   min-inline-size: clamp(148px, calc(91.952px + 14.946vw), 245px);
   block-size: clamp(187px, calc(115.929px + 18.952vw), 310px);
-
   transition: all 1.5s ease-in-out;
   perspective: 1000px;
   cursor: pointer;
 }
+
+
 
 .card-inner {
   inline-size: 100%;
@@ -503,14 +515,13 @@
 
 .card_back-text {
   font-size: clamp(12px, calc(5.066px + 1.849vw), 24px);
-} 
+}
 
 .card_back-number {
   line-height: 100%;
   padding-right: 15px;
   font-size: clamp(45px, calc(15.532px + 7.858vw), 96px);
 }
-
 
 /* --ИСТОРИЯ КЛУБА-------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -522,34 +533,34 @@
 }
 
 .history-title {
-font-family: var(--subtitle-font-family);
-font-size: clamp(35px, calc(27.488px + 2.003vw), 48px);
-font-weight: 300;
-align-self: flex-end;
-
+  font-family: var(--subtitle-font-family);
+  font-size: clamp(35px, calc(27.488px + 2.003vw), 48px);
+  font-weight: 300;
+  align-self: flex-end;
 }
 
 .swiper {
-block-size: clamp(250px, calc(47.766px + 53.929vw), 600px);
-inline-size: 100%;
-
+ inline-size: 100%;
+ block-size: 100%;
 }
 
-
-.swiper-slide {
-background-color: var(--block-color);
-border-radius: 40px;
-display: flex;
-justify-content: center;
-block-size: clamp(205px, calc(11.433px + 51.618vw), 540px);
-min-inline-size: clamp(335px, calc(-40.578px + 100.154vw), 985px);
-padding: 60px 50px;
+.history-cards {
+  block-size: clamp(250px, calc(47.766px + 53.929vw), 600px);
+  inline-size: 100%;
 }
 
-
+.history-card {
+  background-color: var(--block-color);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  block-size: clamp(205px, calc(11.433px + 51.618vw), 540px);
+  min-inline-size: clamp(335px, calc(-40.578px + 100.154vw), 985px);
+  padding: 60px 50px;
+}
 
 .swiper-pagination-bullet {
-  background: white;
+  background: var(--text-color);
   opacity: 0.5;
   width: 10px;
   height: 10px;
@@ -568,7 +579,7 @@ padding: 60px 50px;
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: white;
+  color: var(--text-color);
   background: var(--block-color);
   width: 45px;
   height: 45px;
@@ -611,16 +622,70 @@ padding: 60px 50px;
   transform: translateX(-2px);
 }
 
-
 .history-card-text {
   font-family: var(--text-font-family);
   font-size: clamp(13px, calc(5.488px + 2.003vw), 26px);
 }
 
-
 @media (width <= 768px) {
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
+  }
 }
+
+/*  --- подвал------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(55px, calc(28.998px + 6.934vw), 100px);
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  background-image: linear-gradient(
+    0.48turn,
+    var(--backround-color-body) 0 50%,
+    var(--block-color) 70% 100%
+  );
+}
+
+.text-conteiner-footer {
+  padding: 0 20px;
+}
+
+@media (width <= 768px) {
+  .text-conteiner-footer {
+    padding: 0 80px;
+  }
+}
+
+.title-footer {
+  text-align: center;
+}
+
+.footer_links {
+  display: flex;
+  gap: 40px;
+  block-size: 35px;
+}
+
+.link {
+  inline-size: 35px;
+  transition: transform 0.5s;
+}
+
+.link:hover {
+  transform: scale(1.5);
+}
+
+.footer_icon {
+  fill: var(--text-color);
+}
+
+/* ---TEST SLIDER------------------------------------------------------------------------------------------------------- */
+
+.slider-wrapper {
+  display: flex;
+  gap: 40px;
 }

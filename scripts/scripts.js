@@ -9,11 +9,16 @@ spaceBetween: 30,
     dynamicBullets: true, // Динамические точки (удобно для большого количества слайдов)
   },
 
+  
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  
+ 
+
 });
+
+
+
