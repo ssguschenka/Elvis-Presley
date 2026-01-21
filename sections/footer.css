@@ -1,0 +1,48 @@
+
+.footer {
+  block-size: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(55px, calc(28.998px + 6.934vw), 100px);
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  background-image: linear-gradient(
+    0.48turn,
+    var(--backround-color-body) 0 65%,
+    var(--block-color) 85% 100%
+  );
+}
+
+.text-conteiner-footer {
+  padding: 0 20px;
+}
+
+@media (width <= 768px) {
+  .text-conteiner-footer {
+    padding: 0 80px;
+  }
+}
+
+.title-footer {
+  text-align: center;
+}
+
+.footer_links {
+  display: flex;
+  gap: 40px;
+  block-size: 35px;
+}
+
+.link {
+  inline-size: 35px;
+  transition: transform 0.5s;
+}
+
+.link:hover {
+  transform: scale(1.5);
+}
+
+.footer_icon {
+  fill: var(--text-color);
+}

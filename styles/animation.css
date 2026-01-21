@@ -1,5 +1,22 @@
+@keyframes shake-element {
+  0%,
+  100% {
+    transform: translateX(0) rotateY(0deg);
+  }
+  25% {
+    transform: translateX(-3px) rotateY(-15deg);
+  }
+  50% {
+    transform: translateX(3px) rotateY(13deg);
+  }
+  75% {
+    transform: translateX(-1px) rotateY(-10deg);
+  }
+}
+
 @keyframes fly {
-  0%, 100%{
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -15,12 +32,14 @@
   50% {
     transform: rotateX(180deg);
   }
+
 }
 
 @keyframes flip-tail {
   0%,
   100% {
     transform: rotateX(180deg);
+   
   }
   50% {
     transform: rotateX(0deg);

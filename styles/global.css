@@ -47,3 +47,64 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+
+.page {
+  background-color: var(--backround-color-body);
+  inline-size: 100vw;
+}
+
+.button:hover {
+  outline: 1px solid var(--text-color);
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--text-color);
+}
+
+.text-conteiner {
+  background-image: var(--backround-image-title);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.title {
+  font-family: var(--header-footer-font-family);
+  text-transform: uppercase;
+  font-size: clamp(30px, calc(14.399px + 4.16vw), 57px);
+  line-height: 60px;
+  text-shadow: -1px 0 rgb(255 255 255 / 60%);
+  color: transparent;
+}
+
+@supports (
+  (-webkit-text-stroke: 0.1px rgb(255 255 255 / 60%)) or
+    (text-stroke: 0.1px rgb(255 255 255 / 60%))
+) {
+  .title {
+    -webkit-text-stroke: 0.1px rgb(255 255 255 / 60%);
+    text-stroke: 0.1px rgb(255 255 255 / 60%);
+    text-shadow: none;
+  }
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+}
+
+.main_image {
+  background-image: var(--section-image-bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  inline-size: 100%;
+  block-size: clamp(187px, calc(0.367px + 49.769vw), 510px);
+}

@@ -1,0 +1,98 @@
+
+.main_frisbee {
+  padding: 0 clamp(7px, calc(1.8px + 1.387vw), 16px);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.frisbee_title-container {
+  border-radius: 15px;
+  border: 3px solid var(--darck--accent-color);
+  position: relative;
+}
+
+.frisbee_image_tasua {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  block-size: clamp(295px, calc(150.547px + 38.521vw), 545px);
+  /* display: none; */
+}
+
+.frisbee_image_masha {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  block-size: clamp(285px, calc(134.769px + 40.062vw), 545px);
+  display: none;
+}
+
+.frisbee_title {
+  font-size: clamp(15px, calc(9.8px + 1.387vw), 24px);
+  font-family: var(--title-font-family);
+  line-height: 160%;
+  padding: clamp(14px, calc(9.378px + 1.233vw), 22px) 0
+    clamp(14px, calc(9.378px + 1.233vw), 22px)
+    clamp(30px, calc(12.666px + 4.622vw), 60px);
+}
+
+.frisbee_description {
+  display: flex;
+  gap: clamp(4px, calc(-2.934px + 1.849vw), 16px);
+  padding-left: clamp(0px, calc(-34.669px + 9.245vw), 60px);
+  align-items: center;
+}
+
+.frisbee_icon {
+  stroke: var(--text-color);
+  inline-size: 85px;
+  block-size: 35px;
+  aspect-ratio: 1 / 1;
+  height: clamp(25px, calc(19.222px + 1.541vw), 35px);
+}
+
+.frisbee_text-container {
+  background-color: var(--block-color);
+  border-radius: 12px;
+}
+
+.frisbee_text {
+  font-size: clamp(11px, calc(9.844px + 0.308vw), 13px);
+  font-family: var(--text-font-family);
+  line-height: 160%;
+  padding: 5px 0 10px 10px;
+}
+
+.frisbee_description:nth-child(2) {
+  inline-size: clamp(200px, calc(49.769px + 40.062vw), 460px);
+}
+
+.frisbee_description:nth-child(3) {
+  inline-size: clamp(282px, calc(83.81px + 52.851vw), 625px);
+}
+
+.frisbee_description:nth-child(4) {
+  inline-size: clamp(335px, calc(132.766px + 53.929vw), 685px);
+}
+
+.frisbee_description:nth-child(5) {
+  inline-size: clamp(355px, calc(92.096px + 70.108vw), 810px);
+}
+
+.frisbee_link {
+  inline-size: clamp(255px, calc(78.767px + 46.995vw), 560px);
+  align-self: center;
+  background-image: linear-gradient(
+    0.25turn,
+    var(--accent-color) 0 19%,
+    var(--darck--accent-color) 50% 100%
+  );
+  border-radius: 10px;
+  font-family: var(--title-font-family);
+  font-size: clamp(12px, calc(5.066px + 1.849vw), 24px);
+  color: var(--backround-color-body);
+  line-height: 220%;
+  text-align: center;
+  text-decoration: none;
+}

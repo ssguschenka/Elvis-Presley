@@ -1,0 +1,104 @@
+
+.main_history {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 clamp(7px, calc(1.8px + 1.387vw), 16px);
+}
+
+.history-title {
+  font-family: var(--subtitle-font-family);
+  font-size: clamp(35px, calc(27.488px + 2.003vw), 48px);
+  font-weight: 300;
+  align-self: flex-end;
+}
+
+.history-cards {
+  block-size: clamp(250px, calc(47.766px + 53.929vw), 600px);
+  inline-size: 100%;
+}
+
+.history-card {
+  background-color: var(--block-color);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  block-size: clamp(205px, calc(11.433px + 51.618vw), 540px);
+  min-inline-size: clamp(335px, calc(-40.578px + 100.154vw), 985px);
+  padding: 60px 50px;
+}
+
+.swiper-pagination-bullet {
+  background: var(--text-color);
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet:hover {
+  opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--darck--accent-color);
+  transform: scale(1.2);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--text-color);
+  background: var(--block-color);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.swiper-button-prev {
+  left: 3px;
+}
+
+.swiper-button-next {
+  right: 3px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: var(--darck--accent-color);
+  transform: scale(1.15);
+  box-shadow: 0 0 12px var(--accent-color);
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  transform: scale(1.05);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.swiper-button-next:hover:after {
+  transform: translateX(2px);
+}
+
+.swiper-button-prev:hover:after {
+  transform: translateX(-2px);
+}
+
+.history-card-text {
+  font-family: var(--text-font-family);
+  font-size: clamp(13px, calc(5.488px + 2.003vw), 26px);
+}
+
+@media (width <= 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
