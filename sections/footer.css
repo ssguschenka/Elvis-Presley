@@ -3,14 +3,14 @@
   block-size: 100vh;
   display: flex;
   flex-direction: column;
-  gap: clamp(55px, calc(28.998px + 6.934vw), 100px);
+  gap: clamp(90px, calc(55.331px + 9.245vw), 150px);
   justify-content: center;
   align-items: center;
   padding: 100px 0;
   background-image: linear-gradient(
     0.48turn,
     var(--backround-color-body) 0 65%,
-    var(--block-color) 85% 100%
+    rgba(52, 52, 50, 0.40) 85% 100%
   );
 }
 

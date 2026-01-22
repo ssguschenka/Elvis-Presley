@@ -17,7 +17,6 @@
   top: 40px;
   right: 0;
   block-size: clamp(295px, calc(150.547px + 38.521vw), 545px);
-  /* display: none; */
 }
 
 .frisbee_image_masha {
@@ -35,6 +34,7 @@
   padding: clamp(14px, calc(9.378px + 1.233vw), 22px) 0
     clamp(14px, calc(9.378px + 1.233vw), 22px)
     clamp(30px, calc(12.666px + 4.622vw), 60px);
+    color: var(--text-color);
 }
 
 .frisbee_description {
@@ -42,6 +42,7 @@
   gap: clamp(4px, calc(-2.934px + 1.849vw), 16px);
   padding-left: clamp(0px, calc(-34.669px + 9.245vw), 60px);
   align-items: center;
+  color: var(--text-color);
 }
 
 .frisbee_icon {

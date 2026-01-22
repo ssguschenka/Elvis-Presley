@@ -1,5 +1,6 @@
 //  АНИМАЦИЯ ДИСКА ПРИ КЛИКЕ
 const disk = document.querySelector('.frisbee-flip');
+const theme = document.documentElement;
 const diskRoll = document.querySelector('.frisbee-tails');
 const diskRollReverce = document.querySelector('.frisbee-heads')
 disk.addEventListener('click', () => {
@@ -9,7 +10,19 @@ disk.addEventListener('click', () => {
   setTimeout(function() {
   diskRollReverce.classList.toggle('frisbee-no-rotate');
   diskRollReverce.classList.toggle('frisbee-rotate');
-  }, 1500)
+    theme.classList.toggle('theme-light');
+    theme.classList.toggle('theme-dark');
+
+    
+  }, 1000);
+
+  // if (theme.hasAttribute('theme')) {
+  //     theme.removeAttribute('theme');
+  //     localStorage.removeItem('theme');
+  //   } else {
+  //     theme.setAttribute('theme', 'theme-ligh');
+  //     localStorage.setItem('theme', 'theme-ligh');
+  //   }
   
 })
 
@@ -22,17 +35,17 @@ function AnimationHandler () {
 }
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const element = document.querySelector('.frisbee-flip-shake');
-  // Убедимся, что анимация не начнётся, если класс уже есть,
-  // и уберем его, чтобы можно было повторно запустить (если нужно)
-  element.classList.remove('frisbee-flip-shake');
-  // Добавим его снова, чтобы запустить анимацию
-  // Можно добавить задержку, если нужно подождать, пока браузер отрисует элемент
-  requestAnimationFrame(() => {
-      element.classList.add('frisbee-flip-shake');
-  });
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   const element = document.querySelector('.frisbee-flip-shake');
+//   // Убедимся, что анимация не начнётся, если класс уже есть,
+//   // и уберем его, чтобы можно было повторно запустить (если нужно)
+//   element.classList.remove('frisbee-flip-shake');
+//   // Добавим его снова, чтобы запустить анимацию
+//   // Можно добавить задержку, если нужно подождать, пока браузер отрисует элемент
+//   requestAnimationFrame(() => {
+//       element.classList.add('frisbee-flip-shake');
+//   });
+// });
 
 
 

@@ -15,6 +15,7 @@
   font-family: var(--subtitle-font-family);
   font-size: clamp(23px, calc(8.555px + 3.852vw), 48px);
   font-weight: 400;
+  color: var(--text-color);
 }
 
 .section_card {
@@ -22,21 +23,22 @@
   aspect-ratio: 1 / 1;
   display: grid;
   grid-template-rows: min-content 1fr;
-  box-shadow: 0 0 52px -13px var(--text-color);
+  box-shadow: 0 0 52px -13px var(--block-shadow);
   border-radius: 28%;
   transition: box-shadow 0.5s;
+  color: var(--text-color);
 }
 
 .section_card:hover {
-  box-shadow: 0 0 70px -8px var(--text-color);
+  box-shadow: 0 0 70px -8px var(--darck--block-color);
 }
 
 .section_card:nth-child(2) {
   background-image: radial-gradient(
     circle at top,
     var(--block-color) 0 25%,
-    var(--darck--accent-color) 50% 70%,
-    #343432 85% 100%
+    var(--darck--block-color) 50% 70%,
+    var(--for-gradien-whom-color) 85% 100%
   );
   background-size: 200% 200%;
   background-position: top right;
@@ -46,8 +48,8 @@
   background-image: conic-gradient(
     from 0.55turn at center bottom,
     var(--block-color) 0 45%,
-    rgb(203 171 80 / 74%) 55% 64%,
-    #343432 77% 100%
+    var(--darck--block-color) 55% 64%,
+    var(--for-gradien-whom-color) 77% 100%
   );
 }
 
@@ -55,17 +57,17 @@
   background-image: linear-gradient(
     -15deg,
     var(--block-color) 0 35%,
-    var(--darck--accent-color) 60% 85%,
-    #343432 95% 100%
+    var(--darck--block-color) 60% 85%,
+   var(--for-gradien-whom-color) 95% 100%
   );
 }
 
 .section_card:nth-child(5) {
   background-image: radial-gradient(
     at bottom left,
-    var(--darck--accent-color) 13% 17%,
+    var(--darck--block-color) 13% 17%,
     var(--block-color) 48% 58%,
-    #343432 92% 100%
+   var(--for-gradien-whom-color) 92% 100%
   );
 }
 

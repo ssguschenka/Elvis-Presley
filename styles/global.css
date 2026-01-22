@@ -16,6 +16,7 @@ body {
   max-inline-size: 1024px;
   margin: 0 auto;
   padding: 0;
+  transition: background-color 0.7s;
   
 }
 
@@ -55,7 +56,7 @@ a {
 }
 
 .button:hover {
-  outline: 1px solid var(--text-color);
+  outline: 2px solid var( --accent-color);
   cursor: pointer;
 }
 
@@ -64,7 +65,7 @@ a {
 }
 
 .button:focus-visible {
-  outline: 2px solid var(--text-color);
+  outline: 3px solid var( --accent-color);
 }
 
 .text-conteiner {

@@ -1,1 +1,82 @@
-!
+/* стили для светлой темы */
+
+
+:root.theme-light {
+   --header-dackground-image: linear-gradient(0.25turn,
+    #fff 0% 35%,
+    rgba(52, 52, 50, 0.62) 65% 80%);
+  
+  --header-frisbee-image: url(../svg/disk-light.svg);
+  --header-frisbee-image-flip: url(../svg/disk2-light.svg);
+  --section-image-bg-image: url(../images/elvis-presley-light.jpeg);
+  --section-team-bg-image: url(../images/team-photo-light.png);
+  --backround-color-body: #fff;
+  --backround-image-title: linear-gradient(#ABD2EF 0% 5%, rgb(21 64 153) 63% 100%);
+  --accent-color: #66ACE2;
+  --darck--accent-color: #0A255B;
+   --darck--block-color: #6CB4EB;
+   --for-gradien-whom-color: #fff;
+  --block-color: #ABD2EF;
+  --text-color: #000;
+   --subtitle-color: rgb(10 37 91 / 60%);
+   --block-shadow: #0A255B;
+
+ .header_image {
+    display: none;
+  }
+
+
+  .header_image-light{
+    display: block;
+  }
+
+  .frisbee_image_tasua {
+    display: none;
+  }
+
+  .frisbee_image_masha {
+    display: block;
+  }
+
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+   --header-dackground-image: linear-gradient(0.25turn,
+    #fff 0% 35%,
+    rgba(52, 52, 50, 0.62) 65% 80%);
+  
+  --header-frisbee-image: url(../svg/disk-light.svg);
+  --header-frisbee-image-flip: url(../svg/disk2-light.svg);
+  --section-image-bg-image: url(../images/elvis-presley-light.jpeg);
+  --section-team-bg-image: url(../images/team-photo-light.png);
+  --backround-color-body: #fff;
+  --backround-image-title: linear-gradient(#ABD2EF 0% 5%, rgb(21 64 153) 63% 100%);
+  --accent-color: #66ACE2;
+  --darck--accent-color: #0A255B;
+   --darck--block-color: #6CB4EB;
+   --for-gradien-whom-color: #fff;
+  --block-color: #ABD2EF;
+  --text-color: #000;
+   --subtitle-color: rgb(10 37 91 / 60%);
+   --block-shadow: #0A255B;
+
+ .header_image {
+    display: none;
+  }
+
+
+  .header_image-light{
+    display: block;
+  }
+
+  .frisbee_image_tasua {
+    display: none;
+  }
+
+  .frisbee_image_masha {
+    display: block;
+  }
+
+}
+} */

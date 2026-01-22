@@ -11,10 +11,15 @@
   --backround-image-title: linear-gradient(#f0fab9 0% 45%, #c59d3e 63% 100%);
   --accent-color: #f0fab9;
   --darck--accent-color: #cbab50;
+  --darck--block-color: #cbab50;
+  --for-gradien-whom-color: #343432;
   --block-color: rgb(52 52 50 / 68%);
+  --block-shadow: #fff;
   --text-color: #fff;
+  --subtitle-color: rgb(255 255 255 / 60%);
   --header-footer-font-family: 'Racing Done Pro';
   --title-font-family: 'Chicoree';
   --subtitle-font-family: 'Seenonim';
   --text-font-family: 'Sansation';
+
 }

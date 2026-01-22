@@ -2,8 +2,8 @@
   block-size: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 320px min-content 1fr;
-  position: relative;
+  grid-template-rows: 35vh min-content 1fr;
+  
 }
 
 .gradient-container {
@@ -13,6 +13,7 @@
   inline-size: 100%;
   block-size: 100%;
   z-index: -5;
+  position: relative;
 }
 
 /* .header__theme-menu {
@@ -64,7 +65,7 @@
 .header_subtitle {
   font-size: clamp(20px, calc(3.821px + 4.314vw), 48px);
   font-family: "Neonderthaw";
-  color: rgb(255 255 255 / 60%);
+  color: var(--subtitle-color);
 }
 
 /* ---ТАРЕЛКА--------------------------------------------------------------------- */
@@ -79,9 +80,7 @@
   animation: shake-element 0.5s ease-in-out 2 0.5s forwards;
 }
 
-/* .frisbee-flip-shake {
-  animation: shake-element 0.5s ease-in-out 2 0.5s forwards;  
-} */
+
 
 .frisbee-flip-animation {
   animation: fly 1.8s ease-in-out 0s alternate;
@@ -105,6 +104,7 @@
   inline-size: clamp(30px, calc(18.444px + 3.082vw), 50px);
   block-size: clamp(30px, calc(18.444px + 3.082vw), 50px);
   background-image: var(--header-frisbee-image);
+  background-color: var(--backround-color-body);
   background-position: center;
   background-size: cover;
 }
@@ -113,6 +113,7 @@
   inline-size: clamp(30px, calc(18.444px + 3.082vw), 50px);
   block-size: clamp(30px, calc(18.444px + 3.082vw), 50px);
   background-image: var(--header-frisbee-image-flip);
+  background-color: var(--backround-color-body);
   background-position: center;
   background-size: cover;
 }
@@ -141,7 +142,21 @@
   z-index: -1;
   filter: grayscale(1) brightness(103%) contrast(350%);
   overflow-x: hidden;
+  
 }
+
+.header_image-light {
+  position: absolute;
+  top: 0;
+  right: 0;
+  block-size: 100vh;
+  z-index: -1;
+  overflow-x: hidden;
+  display: none;
+  filter: grayscale(1);
+}
+
+
 
 @media (width <= 700px) {
   .header__theme-menu {

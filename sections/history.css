@@ -11,6 +11,7 @@
   font-size: clamp(35px, calc(27.488px + 2.003vw), 48px);
   font-weight: 300;
   align-self: flex-end;
+  color: var(--darck--accent-color)
 }
 
 .history-cards {
@@ -26,6 +27,7 @@
   block-size: clamp(205px, calc(11.433px + 51.618vw), 540px);
   min-inline-size: clamp(335px, calc(-40.578px + 100.154vw), 985px);
   padding: 60px 50px;
+  color: var(--text-color)
 }
 
 .swiper-pagination-bullet {
@@ -67,7 +69,7 @@
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background: var(--darck--accent-color);
+  background: var(--darck--block-color);
   transform: scale(1.15);
   box-shadow: 0 0 12px var(--accent-color);
 }
