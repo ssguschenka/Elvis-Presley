@@ -18,7 +18,7 @@
 @font-face {
   font-family: 'Seenonim';
   src: local('Seenonim'),
-   url(./ofont.ru_Seenonim.ttf) format('ttf');
+   url(./ofont.ru_Seenonim.woff2) format('woff2');
   font-weight: normal;
   font-display: swap;
 }
@@ -34,7 +34,7 @@
 @font-face {
   font-family: 'Neonderthaw';
   src: local('Neonderthaw'),
-  url(./Neonderthaw-Regular.ttf) format('ttf');
+  url(./Neonderthaw-Regular.woff2) format('woff2');
   font-weight: normal;
   font-display: swap;
 }

@@ -67,6 +67,7 @@
   transition: all 1.5s ease-in-out;
   perspective: 1000px;
   cursor: pointer;
+ 
 }
 
 .card-inner {
@@ -90,9 +91,10 @@
 
 .card_front {
   background-color: var(--for-gradien-whom-color);
-  background-image: url(../images/kris-card.png);
+  background-image: url(../images/Group\ 6.png);
+ /* background-color: var(--text-color); */
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   justify-content: end;
   padding: 10px 12px;
@@ -131,6 +133,7 @@
   border-radius: 15px;
   padding: 0 clamp(7px, calc(-6.29px + 3.544vw), 30px);
   line-height: 260%;
+  text-align: center;
 }
 
 .card_back-text {

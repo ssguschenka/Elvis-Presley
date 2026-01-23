@@ -158,7 +158,7 @@
 
 
 
-@media (width <= 700px) {
+/* @media (width <= 700px) {
   .header__theme-menu {
     grid-column: 3;
     justify-self: end;
@@ -169,4 +169,4 @@
   .header__theme-menu-list {
     flex-direction: column;
   }
-}
+} */
