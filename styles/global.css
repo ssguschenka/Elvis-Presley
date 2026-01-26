@@ -53,6 +53,7 @@ a {
 .page {
   background-color: var(--backround-color-body);
   inline-size: 100vw;
+  
 }
 
 .button:hover {

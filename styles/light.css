@@ -10,6 +10,9 @@
   --header-frisbee-image-flip: url(../svg/disk2-light.svg);
   --section-image-bg-image: url(../images/elvis-presley-light.jpeg);
   --section-team-bg-image: url(../images/team-photo-light.png);
+  --cards-upp-image: url(../images/cards-upp-light.png);
+  --cards-down-image: url(../images/cards-down-light.png);
+  --cards-bg-image: url(../images/cards-bg-light.png);
   --backround-color-body: #fff;
   --backround-image-title: linear-gradient(#ABD2EF 0% 5%, rgb(21 64 153) 63% 100%);
   --accent-color: #66ACE2;

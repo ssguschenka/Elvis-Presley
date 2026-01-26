@@ -1,0 +1,26 @@
+[
+    {
+        "image": "../images/players/kris.png",
+        "number": 66
+    },
+
+    {
+        "image": "../images/players/masha.png",
+        "number": 24
+    },
+
+    {
+        "image": "../images/players/tasya.png",
+        "number": 42
+    },
+
+    {
+        "image": "../images/players/anya.png",
+        "number": 6
+    },
+
+    {
+        "image": "../images/players/masha-klets.png",
+        "number": 17
+    }
+]

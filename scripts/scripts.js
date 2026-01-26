@@ -58,7 +58,7 @@ const swiperTeam = new Swiper(".swiper-team", {
     458: {
       slidesPerView: 2,
       spaceBetween: 30,
-    }, 
+    },
     500: {
       slidesPerView: 2.4,
       spaceBetween: 40,
@@ -70,7 +70,7 @@ const swiperTeam = new Swiper(".swiper-team", {
     991: {
       slidesPerView: 3,
       spaceBetween: 60,
-    }
+    },
   },
 
   grabCursor: true,
@@ -105,3 +105,27 @@ const swiper = new Swiper(".history-cards", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+const wrapper = document.querySelector(".players-upp");
+
+const cardTemplate = document.querySelector("#card-template-upp").content;
+
+function createCards(data, cloneCard) {
+  const cloneCards = cloneCard.cloneNode(true).firstElementChild; //получили карточку
+
+  const front = cloneCards.querySelector(".card_front");
+  front.style.backgroundImage = 'url(' + data.image + ')';
+  // front.style.backgroundColor = 'red';
+
+  const number = cloneCards.querySelector(".card_back-number");
+  number.textContent = data.number;
+  return cloneCards;
+}
+
+fetch("players-data.json") // 🕵️‍♀️ Поиск файла
+  .then((response) => response.json()) // 📬 Загрузка
+  .then((data) =>
+    data.forEach((elem) => {
+      wrapper.append(createCards(elem, cardTemplate));
+    })
+  ); // 🔍 Обработка

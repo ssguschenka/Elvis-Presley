@@ -11,6 +11,9 @@
   --header-frisbee-image-flip: url(../svg/disk2.svg);
   --section-image-bg-image: url(../images/elvis-presley-dark.jpg);
   --section-team-bg-image: url(../images/team-photo-dark.png);
+  --cards-upp-image: url(../images/cards-upp-dark.png);
+  --cards-down-image: url(../images/cards-down-dark.png);
+  --cards-bg-image: url(../images/cards-bg-dark.png);
   --backround-color-body: #000;
   --backround-image-title: linear-gradient(#f0fab9 0% 45%, #c59d3e 63% 100%);
   --accent-color: #f0fab9;
