@@ -17,6 +17,7 @@
   top: 40px;
   right: 0;
   block-size: clamp(295px, calc(150.547px + 38.521vw), 545px);
+  filter: drop-shadow(15px 15px 1px var(--darck--accent-color));
 }
 
 .frisbee_image_masha {
@@ -25,6 +26,7 @@
   right: 0;
   block-size: clamp(285px, calc(134.769px + 40.062vw), 545px);
   display: none;
+  filter: drop-shadow(15px 15px 1px var(--darck--accent-color));
 }
 
 .frisbee_title {
@@ -35,6 +37,7 @@
     clamp(14px, calc(9.378px + 1.233vw), 22px)
     clamp(30px, calc(12.666px + 4.622vw), 60px);
     color: var(--text-color);
+    filter: drop-shadow(5px 5px 1px var(--darck--accent-color));
 }
 
 .frisbee_description {
@@ -51,11 +54,13 @@
   block-size: 35px;
   aspect-ratio: 1 / 1;
   height: clamp(25px, calc(19.222px + 1.541vw), 35px);
+  filter: drop-shadow(5px 5px 1px var(--darck--accent-color));
 }
 
 .frisbee_text-container {
   background-color: var(--block-color);
   border-radius: 12px;
+  box-shadow: 5px 5px 1px var(--darck--accent-color);
 }
 
 .frisbee_text {

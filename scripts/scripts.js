@@ -119,3 +119,14 @@ const swiper = new Swiper(".history-cards", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+// Смена фона при  прокрутке
+window.addEventListener('scroll', () => {
+const scrollPosition  = window.scrollY;
+
+if (scrollPosition > 1500 && scrollPosition < 2200) {
+  document.body.style.backgroundColor = "var(--block-frisbee)";
+} else {
+  document.body.style.backgroundColor ="var(--backround-color-body)";
+}
+});

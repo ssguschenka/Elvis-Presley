@@ -17,7 +17,6 @@ body {
   padding: 0;
   transition: background-color 0.7s;
   font-size: 16px;
-  scrollbar-gutter: stable;
 }
 
 h1,
