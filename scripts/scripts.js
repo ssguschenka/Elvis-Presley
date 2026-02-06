@@ -120,7 +120,7 @@ const swiper = new Swiper(".history-cards", {
   },
 });
 
-// Смена фона при  прокрутке
+// Смена фона при прокрутке
 window.addEventListener('scroll', () => {
 const scrollPosition  = window.scrollY;
 
