@@ -31,22 +31,44 @@ function AnimationHandler() {
   diskRollReverce.classList.remove("tails-animation");
 }
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const element = document.querySelector('.frisbee-flip-shake');
-//   // Убедимся, что анимация не начнётся, если класс уже есть,
-//   // и уберем его, чтобы можно было повторно запустить (если нужно)
-//   element.classList.remove('frisbee-flip-shake');
-//   // Добавим его снова, чтобы запустить анимацию
-//   // Можно добавить задержку, если нужно подождать, пока браузер отрисует элемент
-//   requestAnimationFrame(() => {
-//       element.classList.add('frisbee-flip-shake');
-//   });
-// });
+// Отрисовка карточек
 
-const mediaQuery = window.matchMedia("(width <= 548px)");
+const cardsContainer = document.querySelector(".players-up");
+
+const cardTemplate = document.querySelector("#card-template-up").content;
+
+function createCards(data, cloneCard) {
+  const cloneCards = cloneCard.cloneNode(true).firstElementChild; //получили карточку
+
+  const front = cloneCards.querySelector(".card_front");
+  front.style.backgroundImage = "url(" + data.image + ")";
+
+  const number = cloneCards.querySelector(".card_back-number");
+  number.textContent = data.number;
+
+  // ПЕРЕВОРАЧИВАЕМ КАРТОЧКИ ПО КЛИКУ
+  // const cardTeam = cloneCards.querySelectorAll(".card-inner");
+  // cardTeam.forEach((card) => {
+  //   card.addEventListener("click", () => {
+  //     card.classList.toggle("card-inner-final");
+  //     card.classList.toggle("card-inner-start");
+  //   });
+  // });
+
+  return cloneCards;
+}
+
+fetch("players-data.json") //  Поиск файла
+  .then((response) => response.json()) // Загрузка
+  .then((data) =>
+    data.forEach((elem) => {
+      cardsContainer.append(createCards(elem, cardTemplate));
+    }),
+  ); //  Обработка
 
 // СВАЙПЕР ДЛЯ КАРТОЧЕК ИГРОКОВ
-const swiperTeam = new Swiper(".swiper-team", {
+setTimeout(() => {
+  const swiperTeam = new Swiper(".swiper-team", {
   slidesPerView: 3,
   spaceBetween: 60,
 
@@ -79,16 +101,8 @@ const swiperTeam = new Swiper(".swiper-team", {
     prevEl: ".swiper-button-prev",
   },
 });
+}, 50);
 
-// ПЕРЕВОРАЧИВАЕМ КАРТОЧКИ ПО КЛИКУ
-const cardTeam = document.querySelectorAll(".card-inner");
-
-cardTeam.forEach((card) => {
-  card.addEventListener("click", () => {
-    card.classList.toggle("card-inner-final");
-    card.classList.toggle("card-inner-start");
-  });
-});
 
 // СВАЙПЕР ДЛЯ БЛОКА ИСТОРИИ КЛУБА
 const swiper = new Swiper(".history-cards", {
@@ -105,27 +119,3 @@ const swiper = new Swiper(".history-cards", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-const wrapper = document.querySelector(".players-upp");
-
-const cardTemplate = document.querySelector("#card-template-upp").content;
-
-function createCards(data, cloneCard) {
-  const cloneCards = cloneCard.cloneNode(true).firstElementChild; //получили карточку
-
-  const front = cloneCards.querySelector(".card_front");
-  front.style.backgroundImage = 'url(' + data.image + ')';
-  // front.style.backgroundColor = 'red';
-
-  const number = cloneCards.querySelector(".card_back-number");
-  number.textContent = data.number;
-  return cloneCards;
-}
-
-fetch("players-data.json") // 🕵️‍♀️ Поиск файла
-  .then((response) => response.json()) // 📬 Загрузка
-  .then((data) =>
-    data.forEach((elem) => {
-      wrapper.append(createCards(elem, cardTemplate));
-    })
-  ); // 🔍 Обработка

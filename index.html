@@ -215,22 +215,37 @@
           </div>
         </div>
 
-        
-        <section class="cards cards-upp swiper-team swiper">
-          <div class="swiper-wrapper players-upp">
+        <dialog id="dialog_player">
+        <section class="dialog_description">
+          <p></p>
+        </section>
+        <button
+          class="dialog_button"
+          type="button"
+          onclick="window['dialog_player'].close()"
+          aria-controls="dialog_discetta"
+        >
+        </button>
+        <div class="dialog_background"></div>
+        <h3 class="dialog_number">66</h3>
+        <p class="dialog_name">Гущина Кристина</p>
+      </dialog>
 
-            <template id="card-template-upp">
-              <div class="card swiper-slide">
-              <div class="card-inner">
-                <article class="card_front">
-                  
-                </article>
-                <article class="card_back">
-                  <p class="card_back-text">Номер на поле</p>
-                  <p class="card_back-number">00</p>
-                </article>
+        
+        <section class="cards swiper-team swiper">
+          <div class="swiper-wrapper players-up">
+
+            <template id="card-template-up">
+              <div class="card swiper-slide"
+                onclick="window['dialog_player'].showModal()">
+                <div class="card-inner">
+                  <article class="card_front"></article>
+                  <article class="card_back">
+                    <p class="card_back-text">Номер на поле</p>
+                    <p class="card_back-number">00</p>
+                  </article>
+                </div>
               </div>
-            </div>
             </template>
             
           </div>
@@ -238,29 +253,28 @@
           <div class="swiper-button-prev"></div>
         </section>
 
-        <section class="cards cards-down swiper-team swiper">
-          <div class="swiper-wrapper">
+        <section class="cards swiper-team swiper">
+          <div class="swiper-wrapper players-down">
 
             <template id="card-template-down">
               <div class="card swiper-slide">
-              <div class="card-inner">
-                <article class="card_front">
-                  
-                </article>
-                <article class="card_back">
-                  <p class="card_back-text">Номер на поле</p>
-                  <p class="card_back-number">00</p>
-                </article>
-              </div>
-            </div>
+                <div class="card-inner">
+                  <article class="card_front"></article>
+                  <article class="card_back">
+                    <p class="card_back-text">Номер на поле</p>
+                    <p class="card_back-number">00</p>
+                  </article>
+               </div>
+             </div>
             </template>
 
-            </div>
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </section>
       </section>
+
+      
 
       <section class="main_history">
         <h3 class="history-title">
@@ -358,6 +372,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script src="./scripts/scripts.js"></script>
   </body>
 </html>

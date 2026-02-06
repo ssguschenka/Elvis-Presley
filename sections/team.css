@@ -51,54 +51,36 @@
 
 /* --КАРТОЧКИ ИГРОКОВ-------------------------------------------------------------------- */
 
-
-
-
 .cards {
   display: flex;
   inline-size: 100%;
   block-size: clamp(240px, calc(164.884px + 20.031vw), 370px);
   align-items: center;
-  gap: clamp(40px, calc(34.222px + 1.541vw), 50px);
-  overflow-x: auto;
   padding: 30px clamp(15px, calc(0.555px + 3.852vw), 40px);
   
 }
 
-.cards::-webkit-scrollbar {
+
+.players-up {
+  display: flex;
+  align-items: center;
+}
+
+.players-up::-webkit-scrollbar {
   display: none;
 }
 
-/* .cards-upp {
-background-image: var(--cards-upp-image), radial-gradient(at center 700px,
-    var(--subtitle-color) 0% 25%,
-    var(--backround-color-body) 55% 100%
-  );
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-
-.cards-down {
-background-image: var(--cards-down-image),
-radial-gradient(at center -500px,
-    var(--subtitle-color) 0% 25%,
-    var(--backround-color-body) 55% 100%
-  );
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain;
-} */
 
 .card {
-  min-inline-size: clamp(148px, calc(91.952px + 14.946vw), 245px);
+  inline-size: clamp(163px, calc(97.707px + 17.411vw), 276px);
   block-size: clamp(187px, calc(115.929px + 18.952vw), 310px);
   transition: all 1.5s ease-in-out;
   perspective: 1000px;
   cursor: pointer;
- 
+ flex-shrink: 0;
 }
+
+
 
 .card-inner {
   inline-size: 100%;
@@ -106,6 +88,15 @@ radial-gradient(at center -500px,
   transform-style: preserve-3d;
   transition: transform 1s ease-in-out;
 }
+
+.card-inner-start {
+  transform: rotateY(0deg);
+}
+
+.card-inner-final {
+  transform: rotateY(180deg);
+}
+
 
 .card_front,
 .card_back {
@@ -120,7 +111,6 @@ radial-gradient(at center -500px,
 }
 
 .card_front {
-  
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -141,13 +131,7 @@ radial-gradient(at center -500px,
   transform: rotateY(-180deg);
 }
 
-.card-inner-start {
-  transform: rotateY(0deg);
-}
 
-.card-inner-final {
-  transform: rotateY(180deg);
-}
 
 /* .card-name {
   background-image: linear-gradient(
@@ -172,4 +156,50 @@ radial-gradient(at center -500px,
   line-height: 100%;
   padding-right: 15px;
   font-size: clamp(45px, calc(15.532px + 7.858vw), 96px);
+}
+
+/* ---POPAP------------------------------------------------------------------------------------------------------------------------- */
+
+
+#dialog_player {
+  /* display: none; */
+  padding: 10px;
+  inline-size: clamp(360px, calc(21.98px + 90.139vw), 945px);
+  block-size: clamp(355px, calc(135.431px + 58.552vw), 735px);
+  border: none;
+  margin: auto auto;
+ border-radius: 2%;
+ background-image: linear-gradient(var(--backround-color-body) 0% 5%, var(--accent-color) 31% 100%) ;
+}
+
+#dialog_player[open] {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows:  min-content 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 30px;
+}
+
+@media (width <= 375px) {
+  #dialog_discetta[open] {
+    padding: 3px;
+  }
+}
+
+.dialog_button {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  /* padding: 7px clamp(116px, 111.07px + 1.315vw, 130px); */
+  inline-size: clamp(20px, calc(14.222px + 1.541vw), 30px);
+  aspect-ratio: 1 / 1;
+  background-image: url(../images/out-dark.svg);
+  background-position: center;
+  background-size: cover;
+  color: transparent;
+}
+
+
+#dialog_player::backdrop {
+  background-color: rgb(0 0 0 / 0.80);
 }

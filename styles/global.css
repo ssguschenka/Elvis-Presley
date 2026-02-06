@@ -7,17 +7,17 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-}
 
+
+html,
 body {
   min-inline-size: 375px;
   max-inline-size: 1024px;
   margin: 0 auto;
   padding: 0;
   transition: background-color 0.7s;
-  
+  font-size: 16px;
+  scrollbar-gutter: stable;
 }
 
 h1,
@@ -53,7 +53,6 @@ a {
 .page {
   background-color: var(--backround-color-body);
   inline-size: 100vw;
-  
 }
 
 .button:hover {
@@ -100,6 +99,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 160px;
+  margin: 0 auto;
 }
 
 .main_image {
