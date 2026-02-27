@@ -1,4 +1,6 @@
 :root {
+  color-scheme: dark light;
+/* dark theme colors (default) */
   --header-dackground-image:  linear-gradient(0.25turn,
     #000 0% 35%,
     rgba(52, 52, 50, 0.62) 65% 80%
@@ -10,6 +12,7 @@
   --cards-upp-image: url(../images/cards-upp-dark.png);
   --cards-down-image: url(../images/cards-down-dark.png);
   --cards-bg-image: url(../images/cards-bg-dark.png);
+  --dialog-out-button: url(../images/out-light.svg);
   --backround-color-body: #000;
   --backround-image-title: linear-gradient(#f0fab9 0% 45%, #c59d3e 63% 100%);
   --accent-color: #f0fab9;

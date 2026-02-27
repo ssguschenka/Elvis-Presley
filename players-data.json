@@ -1,26 +1,148 @@
 [
-    {
-        "image": "images/players/kris.png",
-        "number": 66
-    },
-
-    {
+    {   
+        "id": "dialog_player-1",
         "image": "images/players/masha.png",
+        "imageLight": "images/players/masha-light.png",
         "number": 24
     },
 
     {
-        "image": "images/players/tasya.png",
-        "number": 42
+        "id": "dialog_player-2",
+        "image": "images/players/masha-klets.png",
+        "imageLight": "images/players/masha-klets-light.png",
+        "number": 17
     },
 
     {
+        "id": "dialog_player-3",
+        "image": "images/players/alina.png",
+        "imageLight": "images/players/alina-light.png",
+        "number": 88
+    },
+
+    {
+        "id": "dialog_player-4",
+        "image": "images/players/tasya.png",
+        "imageLight": "images/players/tasya-light.png",
+        "number": 42
+    },
+    
+    {
+        "id": "dialog_player-5",
+        "image": "images/players/olesya.png",
+        "imageLight": "images/players/olesya-light.png",
+        "number": 1
+    },
+
+    {
+        "id": "dialog_player-6",
         "image": "images/players/anya.png",
+        "imageLight": "images/players/anya-light.png",
         "number": 6
     },
 
     {
-        "image": "images/players/masha-klets.png",
-        "number": 17
+        "id": "dialog_player-7",
+        "image": "images/players/nastya-m.png",
+        "imageLight": "images/players/nastya-m-light.png",
+        "number":  77
+    },
+
+    {
+        "id": "dialog_player-8",
+        "image": "images/players/lisa.png",
+        "imageLight": "images/players/lisa-light.png",
+        "number": 7
+    },
+
+    {
+        "id": "dialog_player-9",
+        "image": "images/players/misha.png",
+        "imageLight": "images/players/misha-light.png",
+        "number": 32
+    },
+
+    {
+        "id": "dialog_player-10",
+        "image": "images/players/kris.png",
+        "imageLight": "images/players/kris-light.png",
+        "number": 66
+    },
+
+    {
+        "id": "dialog_player-11",
+        "image": "images/players/nastya-s.png",
+        "imageLight": "images/players/nastya-s-light.png",
+        "number": 8
+    },
+
+    {
+        "id": "dialog_player-12",
+        "image": "images/players/lera-z.png",
+        "imageLight": "images/players/lera-z-light.png",
+        "number": 49
+    },
+
+    {
+        "id": "dialog_player-13",
+        "image": "images/players/lera-chu.png",
+        "imageLight": "images/players/lera-chu-light.png",
+        "number": 39
+    },
+
+    {
+        "id": "dialog_player-14",
+        "image": "images/players/masha-alon.png",
+        "imageLight": "images/players/masha-alon-light.png",
+        "number": 14
+    },
+
+    {
+        "id": "dialog_player-15",
+        "image": "images/players/diana.png",
+        "imageLight": "images/players/diana-light.png",
+        "number": 3
+    },
+
+    {
+        "id": "dialog_player-16",
+        "image": "images/players/lena.png",
+        "imageLight": "images/players/lena-light.png",
+        "number": 11
+    },
+
+    {
+        "id": "dialog_player-17",
+        "image": "images/players/ira.png",
+        "imageLight": "images/players/ira-light.png",
+        "number": 18
+    },
+
+    {
+        "id": "dialog_player-18",
+        "image": "images/players/sonya.png",
+        "imageLight": "images/players/sonya-light.png",
+        "number": 36
+    },
+
+    {
+        "id": "dialog_player-19",
+        "image": "images/players/anya-lom.png",
+        "imageLight": "images/players/anya-lom-light.png",
+        "number": 20
+    },
+
+    {
+        "id": "dialog_player-20",
+        "image": "images/players/nastya-pop.png",
+        "imageLight": "images/players/nastya-pop-light.png",
+        "number": 0
+    },
+
+    {
+        "id": "dialog_player-21",
+        "image": "images/players/alex.png",
+        "imageLight": "images/players/alex-light.png",
+        "number": 34
     }
 ]

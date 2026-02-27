@@ -77,6 +77,10 @@
   transform-style: preserve-3d;
   border-radius: 50%;
   cursor: pointer;
+  /* animation: shake-element 0.5s ease-in-out 2 0.5s forwards; */
+}
+
+.frisbee_shake-animation {
   animation: shake-element 0.5s ease-in-out 2 0.5s forwards;
 }
 
