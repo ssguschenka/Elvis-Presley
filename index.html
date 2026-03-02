@@ -223,30 +223,36 @@
           </div>
         </div>
 
-        <dialog id="dialog_player">
+
+       <template id="dialog-template">
+        <dialog class ="dialog_player">
           <span class="dialog_logo">Elvis <br> Presley</span>
-          <p class="dialog_surname">Гущина</p>
-          <p class="dialog_name">Кристина</p>
+          <p class="dialog_surname"></p>
+          <p class="dialog_name"></p>
           <article class="dialog_phooto"></article>
-          <p class="dialog_number">06</p>
+          <p class="dialog_number"></p>
         <section class="dialog_description">
           <p class="question">Позиция на поле:</p>
-          <p class="answer">Каттер</p>
+          <p class="answer position"></p>
           <p class="question">Любимое покрытие: </p>
-          <p class="answer">Трава</p>
+          <p class="answer coating"></p>
           <p class="question">Как пришла в наш спорт:</p>
-          <p class="answer">Решила попробовать поиграть в студенческой команде</p>
+          <p class="answer start"></p>
           <p class="question">Цитата:</p>
-          <blockquote class="answer">И если у меня бутсы на ногах, это еще не значит, что я мужчина или футболист</blockquote>
+          <blockquote class="answer quote"></blockquote>
         </section>
         <button
           class="dialog_button"
           type="button"
-          onclick="window['dialog_player'].close()"
+          
           aria-controls="dialog_player"
         >
         </button>
       </dialog>
+       </template>
+        
+        
+        
 
         
         <section class="cards swiper-team swiper">
@@ -254,7 +260,7 @@
 
             <template id="card-template-up">
               <div class="card swiper-slide"
-                onclick="window['dialog_player'].showModal()">
+                >
                 <div class="card-inner">
                   <article class="card_front"></article>
                   <article class="card_back">
@@ -274,7 +280,8 @@
           <div class="swiper-wrapper players-down">
 
             <template id="card-template-down">
-              <div class="card swiper-slide">
+               <div class="card swiper-slide"
+                >
                 <div class="card-inner">
                   <article class="card_front"></article>
                   <article class="card_back">

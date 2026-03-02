@@ -96,6 +96,9 @@ const cardTemplateUp = document.querySelector("#card-template-up").content;  // 
 const cardsContainerDown = document.querySelector(".players-down");  //  Нижний контейнер карточек
 const cardTemplateDown = document.querySelector("#card-template-down").content;  // Шаблон карточки
 
+// popup
+
+
 
 //  Функция отрисовки карточек
 // @param{data, cloneCard} - 
@@ -118,6 +121,26 @@ function createCards(data, cloneCard) {
   const number = cloneCards.querySelector(".card_back-number");
   number.textContent = data.number;
 
+  cloneCards.setAttribute('onclick', `window["${data.id}"].showModal()`);
+ 
+  const popupTemplate = document.querySelector('#dialog-template').content;
+  const popup = popupTemplate.cloneNode(true).firstElementChild; //поучили попап
+  popup.setAttribute('id', `${data.id}`);
+  const popupBtn = popup.querySelector('.dialog_button');
+  popupBtn.setAttribute('onclick', `window["${data.id}"].close()`);
+  popup.querySelector(".dialog_surname").textContent = data.surname;
+  popup.querySelector(".dialog_name").textContent = data.name;
+  popup.querySelector('.dialog_phooto').style.backgroundImage = `url(${data.imagePopup})`;
+  popup.querySelector('.dialog_number').textContent = data.number;
+  popup.style.backgroundImage = `radial-gradient(at 65% 40%,
+    rgba(255, 255, 255, 0.753) 0% 10%,
+    var(--block-frisbee) 68% 100%),
+    url(${data.backgroundImgPopup})`;
+    popup.querySelector('.position').textContent = data.position;
+    popup.querySelector('.coating').textContent = data.coating;
+    popup.querySelector('.start').textContent = data.start;
+    popup.querySelector('.quote').textContent = data.quote;
+
   // ПЕРЕВОРАЧИВАЕМ КАРТОЧКИ ПО КЛИКУ
   // const cardTeam = cloneCards.querySelectorAll(".card-inner");
   // cardTeam.forEach((card) => {
@@ -126,7 +149,7 @@ function createCards(data, cloneCard) {
   //     card.classList.toggle("card-inner-start");
   //   });
   // });
-  return cloneCards;
+  return [cloneCards, popup];
 }
 
 //Обновление карточек при смене темы - меняем фоновое изображение у карточки игрорка
@@ -159,12 +182,12 @@ fetch("players-data.json") //  Поиск файла
     playersArrUp = data.slice(0, middleIndex);  // Добавляем в массив первую половину полученных обьектов
 
     playersArrUp.forEach((elem) => {   
-      cardsContainerUp.append(createCards(elem, cardTemplateUp));
+      cardsContainerUp.append(...createCards(elem, cardTemplateUp));
     });
 
     playersArrDown = data.slice(middleIndex);  // Добавляем в массив оставшуюся половину полученных обьектов
     playersArrDown.forEach((elem) => {
-      cardsContainerDown.append(createCards(elem, cardTemplateDown));
+      cardsContainerDown.append(...createCards(elem, cardTemplateDown));
     });
 
     // СВАЙПЕР ДЛЯ КАРТОЧЕК ИГРОКОВ

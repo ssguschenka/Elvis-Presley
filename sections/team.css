@@ -160,7 +160,7 @@
 /* ---POPUP------------------------------------------------------------------------------------------------------------------------- */
 
 
-#dialog_player {
+.dialog_player {
   /* display: none; */
   padding: clamp(10px, calc(5.955px + 1.079vw), 17px);
   inline-size: clamp(302px, calc(95.143px + 55.162vw), 660px);
@@ -177,7 +177,7 @@
  background-size: cover;
 }
 
-#dialog_player[open] {
+.dialog_player[open] {
   display: grid;
   grid-template-columns: min-content min-content 1fr;
   grid-template-rows:  min-content 1fr min-content;
@@ -199,7 +199,7 @@
 }
 
 .dialog_phooto {
-  background-image: url(../images/kris.png);
+  /* background-image: url(../images/alex-popup.png); */
   block-size:clamp(350px, calc(136.21px + 57.011vw), 720px);
   inline-size: clamp(200px, calc(78.659px + 32.357vw), 410px);
   background-position: center;
