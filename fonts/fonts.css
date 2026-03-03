@@ -1,7 +1,8 @@
 @font-face {
   font-family: 'Racing Done Pro';
   src: local('Racing Done Pro'),
-  url(./racing-done-pro.woff2) format('woff2');
+  url(./racing-done-pro.woff2) format('woff2'),
+  url(./racing-done-pro.woff) format('woff');
   font-weight: normal;
   font-display: swap;
 }

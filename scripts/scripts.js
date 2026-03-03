@@ -126,6 +126,16 @@ function createCards(data, cloneCard) {
   const popupTemplate = document.querySelector('#dialog-template').content;
   const popup = popupTemplate.cloneNode(true).firstElementChild; //поучили попап
   popup.setAttribute('id', `${data.id}`);
+  // Закрывам попап при клике на страницу
+  popup.addEventListener('click', closeOnBackDropClick);
+  function closeOnBackDropClick({ currentTarget, target }) {
+  const popupElement = currentTarget;
+  const isClickedOnBackDrop = target === popupElement
+  if (isClickedOnBackDrop) {
+    popup.close()
+  }
+}
+// закрываем попап по клике на кнопку
   const popupBtn = popup.querySelector('.dialog_button');
   popupBtn.setAttribute('onclick', `window["${data.id}"].close()`);
   popup.querySelector(".dialog_surname").textContent = data.surname;
@@ -197,11 +207,11 @@ fetch("players-data.json") //  Поиск файла
 
       breakpoints: {
         320: {
-          slidesPerView: 2,
+          slidesPerView: 2.35,
           spaceBetween: 20,
         },
         458: {
-          slidesPerView: 2,
+          slidesPerView: 2.4,
           spaceBetween: 30,
         },
         500: {

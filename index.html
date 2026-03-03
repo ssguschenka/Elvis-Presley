@@ -226,7 +226,8 @@
 
        <template id="dialog-template">
         <dialog class ="dialog_player">
-          <span class="dialog_logo">Elvis <br> Presley</span>
+          <div class="dialog_wrapper">
+            <span class="dialog_logo">Elvis <br> Presley</span>
           <p class="dialog_surname"></p>
           <p class="dialog_name"></p>
           <article class="dialog_phooto"></article>
@@ -244,16 +245,13 @@
         <button
           class="dialog_button"
           type="button"
-          
           aria-controls="dialog_player"
         >
         </button>
+          </div>
+          
       </dialog>
        </template>
-        
-        
-        
-
         
         <section class="cards swiper-team swiper">
           <div class="swiper-wrapper players-up">
@@ -308,31 +306,46 @@
 
         <div class="swiper history-cards" aria-label="История клуба">
           <div class="swiper-wrapper">
-            <article class="swiper-slide history-card">
-              <p class="history-card-text">
-                dhgfghdfghdfgggggggggggg gggggghdghdfgbdfgbdfbfgdfgbfgdfgb
-                fgfgdfgbgdfgbdbvghntyjheyj
-              </p>
+            <article class="swiper-slide history-card history-card-1">
+              <section class="history-card-text">
+                <p class="history_question">дата основания:</p>
+                <p class="history_question">город</p>
+                <p class="history_question">первая форма:</p>
+              </section>
+              <section class="history-card-text">
+                <p class="history_answer">2006 год</p>
+                <p class="history_answer">Псков</p>
+                <p class="history_answer">красно-белая</p>
+              </section>
             </article>
 
-            <article class="swiper-slide history-card">
-              <p class="history-card-text">
-                dhgfghdfghdfgggggggggggg gggggghdghdfgbdfgbdfbfgdfgbfgdfgb
-                fgfgdfgbgdfgbdbvghntyjheyj
-              </p>
-            </article>
-
-            <article class="swiper-slide history-card">
-              <p class="history-card-text">
-                dhgfghdfghdfgggggggggggg gggggghdghdfgbdfgbdfbfgdfgbfgdfgb
-                fgfgdfgbgdfgbdbvghntyjheyj
-              </p>
+            <article class="swiper-slide history-card history-card-2">
+              <section class="history-card-text">
+                <p class="history_question">всего турниров: </p>
+                <p class="history_question">финалы: </p>
+                <p class="history_question">первых мест:</p>
+                <p class="history_question">наград за дух игры:</p>
+              </section>
+              <section class="history-card-text">
+                <p class="history_answer">141</p>
+                <p class="history_answer">75</p>
+                <p class="history_answer">39</p>
+                <p class="history_answer">15</p>
+              </section>
             </article>
           </div>
           <div class="swiper-pagination"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
+      </section>
+
+      <section class="main_join">
+        <h3 class="join_title">Хочешь писать с нами нашу историю?</h3>
+        <a href="#000" target="_blank" class="button join_link">
+          Cтать частью команды
+        </a>
+
       </section>
     </main>
 
