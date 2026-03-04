@@ -37,7 +37,7 @@
         "number": 88,
         "surname": "Акимова",
         "name": "Алина",
-        "position": "",
+        "position": "Хэндлер",
         "coating": "",
         "start": "",
         "quote": "",
@@ -69,7 +69,7 @@
         "name": "Олеся",
         "position": "Каттер защиты(чаще), каттер атаки(реже)",
         "coating": "Трава",
-        "start": "Увидела у девочки с факультета обьявление о набборе игроков в сборную алтимата. Поняла, что там надо бегать, прыгать. Подумала, что я смогу",
+        "start": "Увидела у девочки с факультета обьявление о наборе игроков в сборную алтимата. Поняла, что там надо бегать, прыгать. Подумала, что я смогу",
         "quote": "Терпеть и работать, вы не устали",
         "backgroundImgPopup": "images/players/olesya-bgimg.jpg"
     },
@@ -254,20 +254,6 @@
         "backgroundImgPopup": "images/players/ira-bgimg.jpg"
     },
 
-    {
-        "id": "dialog_player-18",
-        "image": "images/players/sonya.png",
-        "imageLight": "images/players/sonya-light.png",
-        "imagePopup": "images/players/sonya-popup.png",
-        "number": 36,
-        "surname": "Мальцева",
-        "name": "Софья",
-        "position": "",
-        "coating": "",
-        "start": "",
-        "quote": "",
-        "backgroundImgPopup": "images/players/-bgimg.jpg"
-    },
 
     {
         "id": "dialog_player-19",

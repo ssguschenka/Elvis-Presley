@@ -239,7 +239,7 @@
           <p class="answer coating"></p>
           <p class="question">Как пришла в наш спорт:</p>
           <p class="answer start"></p>
-          <p class="question">Цитата:</p>
+          <p class="question">Цитата, которая мотивирует:</p>
           <blockquote class="answer quote"></blockquote>
         </section>
         <button
@@ -249,7 +249,6 @@
         >
         </button>
           </div>
-          
       </dialog>
        </template>
         
@@ -304,40 +303,36 @@
           клуба
         </h3>
 
-        <div class="swiper history-cards" aria-label="История клуба">
-          <div class="swiper-wrapper">
-            <article class="swiper-slide history-card history-card-1">
-              <section class="history-card-text">
-                <p class="history_question">дата основания:</p>
-                <p class="history_question">город</p>
-                <p class="history_question">первая форма:</p>
-              </section>
-              <section class="history-card-text">
-                <p class="history_answer">2006 год</p>
-                <p class="history_answer">Псков</p>
-                <p class="history_answer">красно-белая</p>
-              </section>
-            </article>
+        <div class="history-cards" aria-label="История клуба">
 
-            <article class="swiper-slide history-card history-card-2">
-              <section class="history-card-text">
-                <p class="history_question">всего турниров: </p>
-                <p class="history_question">финалы: </p>
-                <p class="history_question">первых мест:</p>
-                <p class="history_question">наград за дух игры:</p>
-              </section>
-              <section class="history-card-text">
-                <p class="history_answer">141</p>
-                <p class="history_answer">75</p>
-                <p class="history_answer">39</p>
-                <p class="history_answer">15</p>
-              </section>
+          <template id="template_history-middle">
+              <div class="history-middle">
+                <div class="circle"></div>
+              </div>
+            </template>
+            
+            <template id="template_history-card">
+              <article class="history-card">
+              <h4 class="history-card-title"></h3>
+                <p class="history-card-text"></p>
             </article>
+            </template>
+
+            <!-- <template id="template_history-card">
+              <article class="history-card">
+              <h4 class="history-card-title"></h3>
+                <p class="history-card-text"></p>
+            </article>
+            </template>
+            
+            <div class="history-middle">
+              <div class="circle"></div>
+            </div> -->
+            
+            <!-- <article class="history-card-empty">
+            </article> -->
+
           </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
       </section>
 
       <section class="main_join">

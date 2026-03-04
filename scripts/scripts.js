@@ -96,10 +96,6 @@ const cardTemplateUp = document.querySelector("#card-template-up").content;  // 
 const cardsContainerDown = document.querySelector(".players-down");  //  Нижний контейнер карточек
 const cardTemplateDown = document.querySelector("#card-template-down").content;  // Шаблон карточки
 
-// popup
-
-
-
 //  Функция отрисовки карточек
 // @param{data, cloneCard} - 
 // data - обьект c информацией об игроке, поученный из json-файла 
@@ -126,6 +122,7 @@ function createCards(data, cloneCard) {
   const popupTemplate = document.querySelector('#dialog-template').content;
   const popup = popupTemplate.cloneNode(true).firstElementChild; //поучили попап
   popup.setAttribute('id', `${data.id}`);
+
   // Закрывам попап при клике на страницу
   popup.addEventListener('click', closeOnBackDropClick);
   function closeOnBackDropClick({ currentTarget, target }) {
@@ -138,6 +135,7 @@ function createCards(data, cloneCard) {
 // закрываем попап по клике на кнопку
   const popupBtn = popup.querySelector('.dialog_button');
   popupBtn.setAttribute('onclick', `window["${data.id}"].close()`);
+
   popup.querySelector(".dialog_surname").textContent = data.surname;
   popup.querySelector(".dialog_name").textContent = data.name;
   popup.querySelector('.dialog_phooto').style.backgroundImage = `url(${data.imagePopup})`;
@@ -237,19 +235,51 @@ fetch("players-data.json") //  Поиск файла
   });
 
 // СВАЙПЕР ДЛЯ БЛОКА ИСТОРИИ КЛУБА
-const swiper = new Swiper(".history-cards", {
-  spaceBetween: 30,
+// const swiper = new Swiper(".history-cards", {
+//   spaceBetween: 30,
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true, // Точки можно нажимать
-    dynamicBullets: true, // Динамические точки (удобно для большого количества слайдов)
-  },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true, // Точки можно нажимать
+//     dynamicBullets: true, // Динамические точки (удобно для большого количества слайдов)
+//   },
 
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
+
+const containerHistory = document.querySelector('.history-cards');
+const cardTemplateHistory = document.querySelector("#template_history-card").content;  // Шаблон карточки
+const clineMiddle = document.querySelector('#template_history-middle').content.cloneNode(true).firstElementChild;
+
+function createCardHistoryFirst(data, cloneCard) {
+  const cloneCards = cloneCard.cloneNode(true).firstElementChild; //получили карточку
+  
+  cloneCards.querySelector('.history-card-title').textContent = data.year;
+  cloneCards.querySelector('.history-card-text').textContent = data.events;
+
+  return [clineMiddle, cloneCards];
+}
+
+function createCardHistorySecond(data, cloneCard) {
+  const cloneCards = cloneCard.cloneNode(true).firstElementChild; //получили карточку
+  
+  cloneCards.querySelector('.history-card-title').textContent = data.year;
+  cloneCards.querySelector('.history-card-text').textContent = data.events;
+
+  return [cloneCards, clineMiddle];
+}
+
+fetch("history-data.json") //  Поиск файла
+  .then((response) => response.json()) //  Загрузка
+  .then((data) =>{
+    for(let i = 0; i < data.length; i + 2) {
+      
+      containerHistory.append(...createCardHistoryFirst(data[i], cardTemplateHistory));
+      containerHistory.append(...createCardHistorySecond(data[i + 1], cardTemplateHistory));
+    }
+  })
 
 
