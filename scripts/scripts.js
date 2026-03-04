@@ -59,9 +59,9 @@ window
 disk.addEventListener("animationend", AnimationHandler, false);
 
 const container = document.querySelector('.header-tooltip-container');
-const toast = document.createElement('p');
+const toast = document.createElement('div');
 toast.classList.add('header-tooltip');
-toast.textContent = "Сбрось диск";
+toast.innerText = "Сбрось диск";
 container.appendChild(toast);
 function AnimationHandler() {
   toast.remove();

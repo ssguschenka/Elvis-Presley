@@ -54,18 +54,20 @@
 }
 
 .subtitle-container {
+  position: relative;
   grid-column: 1/4;
   grid-row: 3;
-  padding-top: 60px;
+  padding-top: clamp(45px, calc(36.333px + 2.311vw), 60px);
   padding-left: clamp(15px, calc(-21.402px + 9.707vw), 78px);
   display: flex;
-  gap: clamp(15px, calc(6.333px + 2.311vw), 30px);
+  /* gap: clamp(15px, calc(6.333px + 2.311vw), 30px); */
 }
 
 .header_subtitle {
   font-size: clamp(20px, calc(3.821px + 4.314vw), 48px);
   font-family: "Neonderthaw";
   color: var(--subtitle-color);
+  padding-right: clamp(15px, calc(6.333px + 2.311vw), 30px);
 }
 
 /* ---ТАРЕЛКА--------------------------------------------------------------------- */
@@ -81,10 +83,8 @@
 }
 
 .frisbee_shake-animation {
-  animation: shake-element 0.5s ease-in-out 2 0.5s forwards;
+  animation: shake-element 0.5s ease-in-out 3 0.5s forwards;
 }
-
-
 
 .frisbee-flip-animation {
   animation: fly 1.8s ease-in-out 0s alternate;
@@ -139,12 +139,20 @@
 }
 
 .header-tooltip {
+  position: absolute;
+  top: 20px;
   font-family: var(--text-font-family);
-  font-size: clamp(9px, calc(6.689px + 0.616vw), 13px);
+  font-size: clamp(10px, calc(7.111px + 0.77vw), 15px);
   color: var(--text-color);
-  opacity: 0;
-  transform: translateY(10px);
-  animation: slideIn 0.4s forwards, fadeOut 0.3s 1.4s;
+  background-color: var(--block-color);
+  text-align: center;
+  padding: clamp(7px, calc(2.378px + 1.233vw), 15px) 10px clamp(7px, calc(2.378px + 1.233vw), 15px) 10px;
+  border-radius: 12px;
+  border-bottom-left-radius: 0;
+  outline: 1px solid var(--darck--accent-color);
+  opacity: 0; 
+  transform: translateY(10px); 
+  animation: slideIn 0.4s forwards, fadeOut 0.3s 1.7s;
 }
 
 .header_image {
