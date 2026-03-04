@@ -17,7 +17,7 @@ function getTheme() {
 }
 
 // Функция смены темы
-// @param{theme} - полученыый из getTheme()
+// @param{theme} - полученый из getTheme()
 function setTheme(theme) {
   html.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
@@ -51,7 +51,6 @@ window
   .addEventListener("change", (e) => {
     if (!localStorage.getItem("theme")) {
       setTheme(e.matches ? "light" : "dark");
-      
     }
   });
 
@@ -59,7 +58,13 @@ window
   //Удаление всех классов анимаций у диска - AnimationHandler()
 disk.addEventListener("animationend", AnimationHandler, false);
 
+const container = document.querySelector('.header-tooltip-container');
+const toast = document.createElement('p');
+toast.classList.add('header-tooltip');
+toast.textContent = "Сбрось диск";
+container.appendChild(toast);
 function AnimationHandler() {
+  toast.remove();
   disk.classList.remove("frisbee-flip-animation");
   diskRoll.classList.remove("heads-animation");
   diskRollReverce.classList.remove("tails-animation");
