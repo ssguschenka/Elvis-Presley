@@ -1,6 +1,6 @@
 
 .footer {
-  block-size: 100vh;
+  block-size: 80vh;
   display: flex;
   flex-direction: column;
   gap: clamp(90px, calc(55.331px + 9.245vw), 150px);

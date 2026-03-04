@@ -250,35 +250,34 @@ fetch("players-data.json") //  Поиск файла
 //   },
 // });
 
-const containerHistory = document.querySelector('.history-cards');
+const containerHistory = document.querySelector('.history-cards'); // контейрер для карт истории
 const cardTemplateHistory = document.querySelector("#template_history-card").content;  // Шаблон карточки
-const clineMiddle = document.querySelector('#template_history-middle').content.cloneNode(true).firstElementChild;
+const cloneMiddle = document.querySelector('#template_history-middle').content; //шаблон разделяющей линии
 
-function createCardHistoryFirst(data, cloneCard) {
+
+//функция отрисовки карточек и линии
+//@param {data, cloneCard, changeSide}
+//data - обьект из файла 
+//cloneCArd - шаблон карточки
+//changeSide - true || false
+//return - []
+function createCardHistory(data, cloneCard, changeSide) {
   const cloneCards = cloneCard.cloneNode(true).firstElementChild; //получили карточку
-  
   cloneCards.querySelector('.history-card-title').textContent = data.year;
   cloneCards.querySelector('.history-card-text').textContent = data.events;
 
-  return [clineMiddle, cloneCards];
-}
+  const cloneLine = cloneMiddle.cloneNode(true).firstElementChild;
 
-function createCardHistorySecond(data, cloneCard) {
-  const cloneCards = cloneCard.cloneNode(true).firstElementChild; //получили карточку
-  
-  cloneCards.querySelector('.history-card-title').textContent = data.year;
-  cloneCards.querySelector('.history-card-text').textContent = data.events;
-
-  return [cloneCards, clineMiddle];
+  return changeSide ? [cloneLine, cloneCards] : [cloneCards, cloneLine];
 }
 
 fetch("history-data.json") //  Поиск файла
   .then((response) => response.json()) //  Загрузка
   .then((data) =>{
-    for(let i = 0; i < data.length; i + 2) {
-      
-      containerHistory.append(...createCardHistoryFirst(data[i], cardTemplateHistory));
-      containerHistory.append(...createCardHistorySecond(data[i + 1], cardTemplateHistory));
+
+    for(let i = 0; i < data.length; i += 2) {
+      containerHistory.append(...createCardHistory(data[i], cardTemplateHistory, true));
+      containerHistory.append(...createCardHistory(data[i + 1], cardTemplateHistory, false));
     }
   })
 
