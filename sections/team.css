@@ -326,7 +326,7 @@
 .question {
   font-family: var(--text-font-family);
   font-size: clamp(13px, calc(8.955px + 1.079vw), 20px);
-  color: var(--text-color);
+  color: var(--backround-color-body);
   text-shadow: 0 0 7px var(--backround-color-body);
 }
 
