@@ -295,6 +295,7 @@
   padding-bottom: clamp(28px, calc(-2.046px + 8.012vw), 80px);
   justify-self: start;
   font-family: var(--title-font-family);
+  color: white;
   font-size: clamp(25px, calc(10.555px + 3.852vw), 50px);
   text-shadow: -2px -2px var(--darck--accent-color);
 }
@@ -304,6 +305,7 @@
   grid-column: 1 / 3;
   align-self: end;
   font-family: var(--title-font-family);
+  color: white;
   font-size: clamp(30px, calc(2.843px + 7.242vw), 77px);
   padding-left: clamp(30px, calc(18.444px + 3.082vw), 50px);
   text-shadow: -2px -2px var(--darck--accent-color);
