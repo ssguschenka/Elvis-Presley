@@ -83,7 +83,7 @@
 }
 
 .frisbee_shake-animation {
-  animation: shake-element 0.5s ease-in-out 5 2s forwards;
+  animation: shake-element 0.5s ease-in-out 4 1.5s forwards;
 }
 
 .frisbee-flip-animation {
@@ -152,7 +152,7 @@
   outline: 1px solid var(--darck--accent-color);
   opacity: 0; 
   transform: translateY(10px); 
-  animation: slideIn 0.3s forwards 1.8s, fadeOut 0.3s forwards 4.2s;
+  animation: slideIn 0.3s forwards 0.5s, fadeOut 0.3s forwards 3.2s;
 }
 
 .header_image {
