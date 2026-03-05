@@ -15,9 +15,14 @@ body {
   max-inline-size: 1024px;
   margin: 0 auto;
   padding: 0;
-  transition: background-color 0.7s;
+  transition: background-color 1.5s;
   font-size: 16px;
   scrollbar-gutter: stable;
+}
+
+.scroll-lock {
+  overflow: hidden;
+  cursor: auto;
 }
 
 h1,
