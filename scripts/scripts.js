@@ -262,7 +262,7 @@ function initSwipers() {
       spaceBetween: 60,
       freeMode: true,
       loop: true,
-      autoplay: isMobile ? { delay: 3000, pauseOnMouseEnter: true } : false,
+      autoplay: isMobile ? { delay: 2000, pauseOnMouseEnter: true } : false,
 
       breakpoints: {
         320: {
